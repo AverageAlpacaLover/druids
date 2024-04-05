@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:bone"
+    },
+    "G": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "ASA",
+    "G G"
+  ],
+  "result": {
+    "item": "druids:primalist_head"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GSG",
+    "G G"
+  ],
+  "result": {
+    "item": "druids:primalist_legs"
+  }
+}

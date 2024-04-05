@@ -1,0 +1,45 @@
+{
+  "itemGroup.druids.general": "Druids of Storm and Spirit",
+  "item.druids.shard_frost": "Frost Soul Shard",
+  "item.druids.shard_arcane": "Arcane Soul Shard",
+  "item.druids.shard_fire": "Fire Soul Shard",
+  "item.druids.shard_lightning": "Lightning Soul Shard",
+
+  "item.druids.aetherial_druid_spell_book": "Aetherial Spell Book",
+  "item.druids.storm_druid_spell_book": "Soul-Volt Spell Book",
+  "item.druids.wand_lightning": "Lightning Wand",
+  "item.druids.wand_netherite_lightning": "Netherite Lightning Wand",
+  "item.druids.staff_lightning": "Lightning Staff",
+  "item.druids.staff_netherite_lightning": "Netherite Lightning Staff",
+  "item.druids.primalist_head": "Primalist Hood",
+  "item.druids.primalist_chest": "Primalist Bindings",
+  "item.druids.primalist_legs": "Primalist Girdle",
+  "item.druids.primalist_feet": "Primalist Boots",
+  "effect.druids.eternalyouth": "Eternal Youth",
+  "effect.druids.cleansingfire": "Cleansing Fire",
+  "effect.druids.voltaic_burst": "Voltaic Burst",
+
+  "spell.druids.chain.name": "Galvanic Contagion",
+  "spell.druids.chain.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. Shoot a chaining projectile at an enemy.",
+  "spell.druids.voltaic_burst.name": "Voltaic Burst",
+  "spell.druids.voltaic_burst.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. Receive or increment a refreshing, de-incrementing buff that scales your relevant powers as well as spell haste for 2 seconds, shortened by spell haste. You perform a nova each time this buff expires.",
+
+  "spell.druids.spiritbolts.name": "Spirit Bolts",
+  "spell.druids.spiritbolts.description": "Up to {damage}_0 Soul, {damage}_1 Frost, or {damage}_2 Fire DPS. Channel to shoot soul, fire, or frost bolts, based on the weights of your Spell Powers. When you shoot out a bolt, you get a temporary buff for the elements not chosen.",
+  "spell.druids.stormcall.name": "Storm Call",
+  "spell.druids.stormcall.description": "{damage}_0 Lightning | {damage}_1 Soul 4 times a second. Call a storm at your location.",
+  "spell.druids.soulflare.name": "Soul Flare",
+  "spell.druids.soulflare.description": "{damage} Soul 2 times a second. Launch a ball of soul energy that carries enemies in the direction it is moving.",
+  "spell.druids.tendrils.name": "Storm Surge",
+  "spell.druids.tendrils.description": "Channel to smite enemies in front of you, having less chance to work per enemy over 4 in the area. Deals 1.5x Lightning and Arcane DPS.",
+  "spell.druids.lightningblast.name": "Soul Smite",
+  "spell.druids.lightningblast.description": "{damage}_0 Lightning | {damage}_1 Soul. Target an enemy to smite it and nearby enemies.",
+  "spell.druids.galvanic_rite.name": "Soul Shock",
+  "spell.druids.galvanic_rite.description": "Blast an enemy with arcane energy for 0.45x Soul and Arcane, gaining 1 stack of Lightning Power for 10 seconds, up to 5.",
+  "spell.druids.maelstromtotem.name": "Maelstrom Totem",
+  "spell.druids.maelstromtotem.description": "{damage}_0 Soul | {damage}_1 Frost {damage}_2 | Fire 4 times a second. Summon a Maelstrom Totem at the target block or surface, which in turn summons three vortexes spiraling around it.",
+
+  "spell.druids.soulfirebastion.name": "Soulfire Bastion",
+  "spell.druids.soulfirebastion.description": "Toggle between two defensive buffs, performing a damaging nova based on either Soul and Absorption or Fire and Health upon toggling, and setting yourself to half of the relevant hearts. Cleansing Flame regenerates 60%% of your wounds over 4 seconds (Stacking with Determination). Eternal Youth sacrifices 90%% of your health to gain 20 Reabsorption. Shift while casting to instead remove the buff."
+
+}

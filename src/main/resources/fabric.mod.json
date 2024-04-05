@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "druids",
+	"version": "${version}",
+	"name": "Druids of Storm and Spirit",
+	"description": "Druids Mod!",
+	"authors": [
+		"cleannrooster!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/druids/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.druids.Druids"
+		],
+		"client": [
+			"com.druids.DruidsClient"
+		]
+	},
+	"mixins": [
+		"druids.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"spell_engine": ">=0.13.0",
+		"extraspellattributes": ">=1.1.0",
+		"java": ">=17",
+		"fabric-api": "*",
+		"azurelib": ">=1.0.29"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
