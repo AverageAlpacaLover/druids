@@ -1,25 +1,19 @@
 package com.druids.client.entity;
 
-import com.druids.Druids;
 import com.druids.entity.DruidLightning;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.block.entity.BeaconBlockEntityRenderer;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.entity.LightningEntityRenderer;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.random.Random;
 import org.joml.Matrix4f;
-
-import static java.lang.Math.abs;
 
 @Environment(EnvType.CLIENT)
 public class DruidLightningRenderer extends EntityRenderer<DruidLightning> {

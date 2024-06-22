@@ -3,7 +3,6 @@ package com.druids.entity;
 import com.druids.Druids;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.FlyingItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,15 +18,11 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 import net.spell_engine.api.spell.Spell;
 import net.spell_engine.api.spell.SpellInfo;
-import net.spell_engine.client.SpellEngineClient;
-import net.spell_engine.entity.SpellProjectile;
 import net.spell_engine.internals.SpellHelper;
 import net.spell_engine.internals.SpellRegistry;
 import net.spell_engine.utils.TargetHelper;
-import net.spell_power.api.SpellDamageSource;
 import net.spell_power.api.SpellPower;
 
-import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
 

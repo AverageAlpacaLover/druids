@@ -1,7 +1,6 @@
 package com.druids.items;
 
 import com.druids.client.item.renderer.ShardRenderer;
-import com.extraspellattributes.ReabsorptionInit;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import mod.azure.azurelib.animatable.GeoItem;
@@ -20,14 +19,10 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
-import net.spell_engine.SpellEngineMod;
 import net.spell_engine.api.item.weapon.StaffItem;
-import net.spell_power.api.SpellPower;
 import net.spell_power.api.SpellSchool;
 import net.spell_power.api.SpellSchools;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Supplier;

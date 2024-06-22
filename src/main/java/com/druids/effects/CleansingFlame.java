@@ -3,7 +3,6 @@ package com.druids.effects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.spell_engine.api.effect.CustomParticleStatusEffect;
 
 public class CleansingFlame extends StatusEffect {
     public CleansingFlame(StatusEffectCategory category, int color) {

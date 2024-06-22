@@ -1,7 +1,6 @@
 package com.druids.client.entity;
 
 import com.druids.Druids;
-import com.druids.entity.DruidCyclone;
 import com.druids.entity.TotemEntity;
 import mod.azure.azurelib.model.GeoModel;
 import net.minecraft.util.Identifier;
