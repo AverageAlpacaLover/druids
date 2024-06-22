@@ -13,7 +13,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.item.trinket.SpellBooks;
 import net.spell_engine.api.item.weapon.Weapon;
-import net.spell_power.api.MagicSchool;
+import net.spell_power.api.SpellSchool;
+import net.spell_power.api.SpellSchools;
 
 public class ItemsInit {
     public static ItemGroup DRUIDS;
@@ -36,13 +37,13 @@ public class ItemsInit {
     public static void register() {
 
         ARCANESHARD = registerItem("shard_arcane",new Shard(Weapon.CustomMaterial.matching(ToolMaterials.DIAMOND,
-                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), MagicSchool.ARCANE));
+                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), SpellSchools.ARCANE));
         FROSTSHARD = registerItem("shard_frost",new Shard(Weapon.CustomMaterial.matching(ToolMaterials.DIAMOND,
-                () -> Ingredient.ofItems(Items.PRISMARINE_CRYSTALS)), new FabricItemSettings(), MagicSchool.FROST));
+                () -> Ingredient.ofItems(Items.PRISMARINE_CRYSTALS)), new FabricItemSettings(), SpellSchools.FROST));
         FIRESHARD = registerItem("shard_fire",new Shard(Weapon.CustomMaterial.matching(ToolMaterials.DIAMOND,
-                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), MagicSchool.FIRE));
+                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), SpellSchools.FIRE));
         LIGHTNINGSHARD = registerItem("shard_lightning",new Shard(Weapon.CustomMaterial.matching(ToolMaterials.DIAMOND,
-                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), MagicSchool.LIGHTNING));
+                () -> Ingredient.ofItems(Items.AMETHYST_SHARD)), new FabricItemSettings(), SpellSchools.LIGHTNING));
 
         DRUIDS = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(ARCANESHARD))

@@ -2,7 +2,7 @@
   "school": "LIGHTNING",
   "range": 10,
   "learn": {
-    "tier": 4
+    "tier": 3
   },
   "cast": {
     "duration": 2,
@@ -21,7 +21,7 @@
         "max_speed": 0.1
       }
     ],
-    "animation": "spell_engine:one_handed_area_charge"
+    "animation": "druids:raise_lightning"
   },
   "release": {
     "custom_impact": true,

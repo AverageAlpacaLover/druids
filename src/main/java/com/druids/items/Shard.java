@@ -19,10 +19,12 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
+import net.spell_engine.SpellEngineMod;
 import net.spell_engine.api.item.weapon.StaffItem;
-import net.spell_power.api.MagicSchool;
 import net.spell_power.api.SpellPower;
-import net.spell_power.api.attributes.SpellAttributes;
+import net.spell_power.api.SpellSchool;
+import net.spell_power.api.SpellSchools;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -32,12 +34,12 @@ import java.util.function.Supplier;
 
 public class Shard extends StaffItem implements GeoItem {
 
-    public Shard(ToolMaterial material, Settings settings,MagicSchool school) {
+    public Shard(ToolMaterial material, Settings settings,SpellSchool school) {
         super(material, settings);
         this.school = school;
 
     }
-    MagicSchool school = MagicSchool.PHYSICAL_MELEE;
+    SpellSchool school = SpellSchools.getSchool(new Identifier("spell_power", "physical_melee").toString());
 
     @Override
     public void createRenderer(Consumer<Object> consumer) {
@@ -59,8 +61,8 @@ public class Shard extends StaffItem implements GeoItem {
         var modifiers = super.getAttributeModifiers(stack, slot);
         builder.putAll(modifiers);
         if(slot.equals(EquipmentSlot.OFFHAND)){
-            builder.put(SpellAttributes.POWER.get(MagicSchool.SOUL).attribute, new EntityAttributeModifier(UUID.fromString("38c504e2-d5f9-4128-8349-8049163a895c"), "druids:soul", 4, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(SpellAttributes.POWER.get(this.school).attribute, new EntityAttributeModifier(UUID.fromString("1255d7d7-3cbf-4204-b031-bfe790c1155f"), "druids:shard", 0.5, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+            builder.put((SpellSchools.SOUL).attribute, new EntityAttributeModifier(UUID.fromString("38c504e2-d5f9-4128-8349-8049163a895c"), "druids:soul", 4, EntityAttributeModifier.Operation.ADDITION));
+            builder.put(this.school.attribute, new EntityAttributeModifier(UUID.fromString("1255d7d7-3cbf-4204-b031-bfe790c1155f"), "druids:shard", 0.5, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 
         }
         return builder.build();
@@ -69,7 +71,7 @@ public class Shard extends StaffItem implements GeoItem {
     private AnimatableInstanceCache factory = AzureLibUtil.createInstanceCache(this);
     public static final RawAnimation IDLE = RawAnimation.begin().thenLoop("idle");
 
-    public MagicSchool getSchool() {
+    public SpellSchool getSchool() {
         return school;
     }
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);

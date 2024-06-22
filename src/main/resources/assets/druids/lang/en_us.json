@@ -11,6 +11,8 @@
   "item.druids.wand_netherite_lightning": "Netherite Lightning Wand",
   "item.druids.staff_lightning": "Lightning Staff",
   "item.druids.staff_netherite_lightning": "Netherite Lightning Staff",
+  "item.druids.staff_crystal_lightning": "Crystal Lightning Staff",
+
   "item.druids.primalist_head": "Primalist Hood",
   "item.druids.primalist_chest": "Primalist Bindings",
   "item.druids.primalist_legs": "Primalist Girdle",
@@ -20,26 +22,26 @@
   "effect.druids.voltaic_burst": "Voltaic Burst",
 
   "spell.druids.chain.name": "Galvanic Contagion",
-  "spell.druids.chain.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. Shoot a chaining projectile at an enemy.",
+  "spell.druids.chain.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. This contagion of unstable energy quickly bounces between targets, spreading like a plague.",
   "spell.druids.voltaic_burst.name": "Voltaic Burst",
-  "spell.druids.voltaic_burst.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. Receive or increment a refreshing, de-incrementing buff that scales your relevant powers as well as spell haste for 2 seconds, shortened by spell haste. You perform a nova each time this buff expires.",
+  "spell.druids.voltaic_burst.description": "{damage}_0 Lightning | {damage}_1 Soul | {damage}_2 Arcane. Developed by forgotten mage whose reach always far exceeded their grasp, this spell relies on the human desire for power to allow the user to lay waste to wherever they walk, getting stronger as they continue to cast the spell.",
 
   "spell.druids.spiritbolts.name": "Spirit Bolts",
-  "spell.druids.spiritbolts.description": "Up to {damage}_0 Soul, {damage}_1 Frost, or {damage}_2 Fire DPS. Channel to shoot soul, fire, or frost bolts, based on the weights of your Spell Powers. When you shoot out a bolt, you get a temporary buff for the elements not chosen.",
+  "spell.druids.spiritbolts.description": "Up to {damage}_0 Soul, {damage}_1 Frost, or {damage}_2 Fire DPS. A staple occultist spell that either transforms or magnifies soul energy, and sends it hurling forward many times a second.",
   "spell.druids.stormcall.name": "Storm Call",
-  "spell.druids.stormcall.description": "{damage}_0 Lightning | {damage}_1 Soul 4 times a second. Call a storm at your location.",
+  "spell.druids.stormcall.description": "{damage}_0 Lightning | {damage}_1 Soul 4 times a second. One day during a drought, the Druids had had enough. They figured the only way to make it rain was to make the gods cry.",
   "spell.druids.soulflare.name": "Soul Flare",
-  "spell.druids.soulflare.description": "{damage} Soul 2 times a second. Launch a ball of soul energy that carries enemies in the direction it is moving.",
+  "spell.druids.soulflare.description": "{damage} Soul 2 times a second. Adversaries on the receiving end of this spell have been reported to never return, possibly having been sent hurling miles away.",
   "spell.druids.tendrils.name": "Storm Surge",
   "spell.druids.tendrils.description": "Channel to smite enemies in front of you, having less chance to work per enemy over 4 in the area. Deals 1.5x Lightning and Arcane DPS.",
   "spell.druids.lightningblast.name": "Soul Smite",
-  "spell.druids.lightningblast.description": "{damage}_0 Lightning | {damage}_1 Soul. Target an enemy to smite it and nearby enemies.",
+  "spell.druids.lightningblast.description": "{damage}_0 Lightning | {damage}_1 Soul. Turn the divines' ire onto a single point, decimating the immediate area.",
   "spell.druids.galvanic_rite.name": "Soul Shock",
   "spell.druids.galvanic_rite.description": "Blast an enemy with arcane energy for 0.45x Soul and Arcane, gaining 1 stack of Lightning Power for 10 seconds, up to 5.",
   "spell.druids.maelstromtotem.name": "Maelstrom Totem",
-  "spell.druids.maelstromtotem.description": "{damage}_0 Soul | {damage}_1 Frost {damage}_2 | Fire 4 times a second. Summon a Maelstrom Totem at the target block or surface, which in turn summons three vortexes spiraling around it.",
+  "spell.druids.maelstromtotem.description": "{damage}_0 Soul | {damage}_1 Frost {damage}_2 | Fire 4 times a second. An effigy of the everlasting Maelstrom is conjured at a spot of your choosing, submitting the area to the elements.",
 
   "spell.druids.soulfirebastion.name": "Soulfire Bastion",
-  "spell.druids.soulfirebastion.description": "Toggle between two defensive buffs, performing a damaging nova based on either Soul and Absorption or Fire and Health upon toggling, and setting yourself to half of the relevant hearts. Cleansing Flame regenerates 60%% of your wounds over 4 seconds (Stacking with Determination). Eternal Youth sacrifices 90%% of your health to gain 20 Reabsorption. Shift while casting to instead remove the buff."
+  "spell.druids.soulfirebastion.description": "Every acquainted mage knows that you can only reasonably protect the mind or the body at one time. The question is - which, and when. (Toggled buff. Shift while casting to remove the buff)"
 
 }

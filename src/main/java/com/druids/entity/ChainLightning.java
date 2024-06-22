@@ -34,8 +34,8 @@ import net.spell_engine.internals.SpellRegistry;
 import net.spell_engine.internals.WorldScheduler;
 import net.spell_engine.particle.Particles;
 import net.spell_engine.utils.TargetHelper;
-import net.spell_power.api.MagicSchool;
 import net.spell_power.api.SpellPower;
+import net.spell_power.api.SpellSchools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -186,7 +186,7 @@ public class ChainLightning extends ThrownItemEntity {
                         SpellPower.Vulnerability vulnerability = SpellPower.Vulnerability.none;
 
 
-                        SpellPower.Result power = SpellPower.getSpellPower(MagicSchool.LIGHTNING, (LivingEntity) this.getOwner());
+                        SpellPower.Result power = SpellPower.getSpellPower(SpellSchools.LIGHTNING, (LivingEntity) this.getOwner());
                         lightning.power = power;
                         lightning.target = entity;
                         lightning.setVelocity(entity.getPos().subtract(entityHitResult.getEntity().getPos().add(0, entityHitResult.getEntity().getBoundingBox().getYLength() / 2, 0)).normalize());

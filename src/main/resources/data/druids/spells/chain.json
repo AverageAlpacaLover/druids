@@ -45,6 +45,7 @@
 
   "impact": [
     {
+      "school": "LIGHTNING",
       "action": {
         "type": "DAMAGE",
         "damage": {

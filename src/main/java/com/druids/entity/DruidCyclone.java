@@ -29,7 +29,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.spellbladenext.Spellblades.MOD_ID;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 

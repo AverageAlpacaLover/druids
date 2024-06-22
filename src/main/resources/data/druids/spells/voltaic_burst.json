@@ -5,8 +5,8 @@
     "tier": 2
   },
   "cast": {
-    "duration": 0.4,
-    "animation": "spell_engine:two_handed_channeling",
+    "duration": 0.6,
+    "animation": "druids:twohand_lightning",
     "sound": {
       "id": "spell_engine:generic_arcane_casting",
       "randomness": 0
@@ -39,7 +39,7 @@
         "vertical_range_multiplier": 1.0
       }
     },
-    "animation": "spell_engine:one_handed_projectile_release",
+    "animation": "spell_engine:one_handed_area_release",
     "sound": {
       "id": "entity.illusioner.cast_spell"
     }
@@ -65,6 +65,7 @@
       ]
     },
     {
+
       "school": "SOUL",
       "action": {
         "type": "DAMAGE",

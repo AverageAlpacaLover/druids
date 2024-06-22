@@ -1,18 +1,17 @@
 package com.druids.items;
 
 import com.druids.Druids;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.paladins.item.Group;
 import net.spell_engine.api.item.ItemConfig;
 import net.spell_engine.api.item.weapon.StaffItem;
 import net.spell_engine.api.item.weapon.Weapon;
-import net.spell_power.api.MagicSchool;
-import net.spell_power.api.attributes.SpellAttributes;
+import net.spell_power.api.SpellSchools;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -58,11 +57,11 @@ public class Weapons {
 
  public static final Weapon.Entry lightningWand = wand("wand_lightning",
             Weapon.CustomMaterial.matching(ToolMaterials.IRON, () -> Ingredient.ofItems(Items.GOLD_INGOT)))
-            .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 2));
+            .attribute(ItemConfig.Attribute.bonus(SpellSchools.LIGHTNING.id, 2));
 
     public static final Weapon.Entry netheriteLightningWand = wand("wand_netherite_lightning",
             Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)))
-            .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 3));
+            .attribute(ItemConfig.Attribute.bonus(SpellSchools.LIGHTNING.id, 3));
 
     // MARK: Staves
 
@@ -81,19 +80,19 @@ public class Weapons {
 
          public static final Weapon.Entry lightningStaff = staff("staff_lightning",
             Weapon.CustomMaterial.matching(ToolMaterials.DIAMOND, () -> Ingredient.ofItems(Items.GOLD_INGOT)))
-            .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 4));
+            .attribute(ItemConfig.Attribute.bonus(SpellSchools.LIGHTNING.id, 4));
 
     public static final Weapon.Entry netheriteLightningStaff = staff("staff_netherite_lightning",
             Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)))
-            .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 5));
+            .attribute(ItemConfig.Attribute.bonus(SpellSchools.LIGHTNING.id, 5));
 
     public static void register(Map<String, ItemConfig.Weapon> configs) {
-  /*      if (FabricLoader.getInstance().isModLoaded("betternether")) {
-            staff("betternether", "staff_ruby_fire",
-                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betternether:nether_ruby")))
-                    .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), 6));
-        }
         if (FabricLoader.getInstance().isModLoaded("betterend")) {
+            staff("betterend", "staff_crystal_lightning",
+                    Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betternether:amber_gem")))
+                    .attribute(ItemConfig.Attribute.bonus(SpellSchools.LIGHTNING.id, 6));
+        }
+        /*if (FabricLoader.getInstance().isModLoaded("betterend")) {
             staff("betterend", "staff_crystal_arcane",
                     Weapon.CustomMaterial.matching(ToolMaterials.NETHERITE, ingredient("betterend:aeternium_ingot")))
                     .attribute(ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), 6));

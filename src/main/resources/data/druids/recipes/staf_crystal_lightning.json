@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "betterend:crystal_shards"
+    },
+    "I": {
+      "item": "betterend:aeternium_ingot"
+    },
+    "C": {
+      "item": "betterend:amber_gem"
+    }
+  },
+  "pattern": [
+    " GC",
+    " IG",
+    "I  "
+  ],
+  "result": {
+    "item": "druids:staff_crystal_lightning"
+  }
+}

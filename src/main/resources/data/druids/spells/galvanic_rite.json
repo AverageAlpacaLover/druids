@@ -6,7 +6,7 @@
   },
   "cast": {
     "duration": 0.8,
-    "animation": "spell_engine:two_handed_channeling",
+    "animation": "druids:twohand_lightning",
     "sound": {
       "id": "spell_engine:generic_arcane_casting",
       "randomness": 0
@@ -35,7 +35,7 @@
       "type": "CURSOR",
       "cursor": { }
     },
-    "animation": "spell_engine:one_handed_projectile_release",
+    "animation": "spell_engine:one_handed_area_release",
     "sound": {
       "id": "entity.illusioner.cast_spell"
     }

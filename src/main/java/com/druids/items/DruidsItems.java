@@ -1,7 +1,5 @@
 package com.druids.items;
 
-import com.spellbladenext.Spellblades;
-import com.spellbladenext.items.Items;
 import net.minecraft.item.Item;
 
 import java.util.HashMap;

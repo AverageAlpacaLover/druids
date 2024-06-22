@@ -3,9 +3,6 @@ package com.druids.items.Armors;
 import com.druids.client.item.renderer.PrimalistArmorRenderer;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.spellbladenext.client.item.renderer.MagisterArmorItemRenderer;
-import com.spellbladenext.client.item.renderer.MagisterArmorRenderer;
-import com.spellbladenext.items.interfaces.PlayerDamageInterface;
 import mod.azure.azurelib.animatable.GeoItem;
 import mod.azure.azurelib.animatable.client.RenderProvider;
 import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
@@ -25,7 +22,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.Util;
 import net.minecraft.world.World;
 import net.spell_engine.api.item.armor.Armor;
-import net.spell_power.api.MagicSchool;
+import net.spell_power.api.SpellSchools;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -60,7 +57,7 @@ public class PrimalistArmor extends CustomArmor implements GeoItem {
         uuidMap.put(Type.CHESTPLATE, UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"));
         uuidMap.put(Type.HELMET, UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150"));
     });
-    private final List<MagicSchool> magicschool = new ArrayList<>();
+    private final List<SpellSchools> magicschool = new ArrayList<>();
 
     @Override
     public void setAttributes(Multimap<EntityAttribute, EntityAttributeModifier> attributes) {
@@ -73,7 +70,7 @@ public class PrimalistArmor extends CustomArmor implements GeoItem {
     }
 
     // MARK: GeoItem
-    public List<MagicSchool> getMagicschool() {
+    public List<SpellSchools> getMagicschool() {
         return magicschool;
     }
     private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);

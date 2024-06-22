@@ -2,11 +2,6 @@ package com.druids.items.Armors;
 
 import com.druids.Druids;
 import com.druids.items.ItemsInit;
-import com.spellbladenext.Spellblades;
-import com.spellbladenext.items.armor.HeraldArmor;
-import com.spellbladenext.items.armor.MagisterArmor;
-import com.spellbladenext.items.armor.MagusArmor;
-import com.spellbladenext.items.armor.RunicArmor;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -14,8 +9,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvents;
 import net.spell_engine.api.item.ItemConfig;
 import net.spell_engine.api.item.armor.Armor;
-import net.spell_power.api.MagicSchool;
-import net.spell_power.api.attributes.SpellAttributes;
+import net.spell_power.api.SpellSchools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,26 +63,26 @@ public class Armors {
                     ItemConfig.ArmorSet.with(
                             new ItemConfig.ArmorSet.Piece(2)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.SOUL), 0.15F),
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 0.15F)
+                                            ItemConfig.Attribute.multiply((SpellSchools.SOUL.id), 0.15F),
+                                            ItemConfig.Attribute.multiply((SpellSchools.LIGHTNING.id), 0.15F)
 
                                     )),
                             new ItemConfig.ArmorSet.Piece(6)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.SOUL), 0.15F),
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 0.15F)
+                                            ItemConfig.Attribute.multiply((SpellSchools.SOUL.id), 0.15F),
+                                            ItemConfig.Attribute.multiply((SpellSchools.LIGHTNING.id), 0.15F)
 
                                     )),
                             new ItemConfig.ArmorSet.Piece(4)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.SOUL), 0.15F),
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 0.15F)
+                                            ItemConfig.Attribute.multiply((SpellSchools.SOUL.id), 0.15F),
+                                            ItemConfig.Attribute.multiply((SpellSchools.LIGHTNING.id), 0.15F)
 
                                     )),
                             new ItemConfig.ArmorSet.Piece(2)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.SOUL), 0.15F),
-                                            ItemConfig.Attribute.multiply(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), 0.15F)
+                                            ItemConfig.Attribute.multiply((SpellSchools.SOUL.id), 0.15F),
+                                            ItemConfig.Attribute.multiply((SpellSchools.LIGHTNING.id), 0.15F)
 
                                     ))
                     ))   .bundle(material -> new Armor.Set(Druids.MODID,

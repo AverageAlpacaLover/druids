@@ -27,6 +27,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -34,8 +35,11 @@ import net.runes.tinyconfig.ConfigManager;
 import net.spell_engine.api.item.ItemConfig;
 import net.spell_engine.api.loot.LootConfig;
 import net.spell_engine.api.loot.LootHelper;
-import net.spell_power.api.MagicSchool;
-import net.spell_power.api.attributes.SpellAttributes;
+import net.spell_power.api.SpellPower;
+import net.spell_power.api.SpellPowerMechanics;
+import net.spell_power.api.SpellSchool;
+import net.spell_power.api.SpellSchools;
+import net.wizards.item.WizardArmor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,12 +62,11 @@ public class Druids implements ModInitializer {
 	public static StatusEffect CLEANSING = new CleansingFlame(StatusEffectCategory.BENEFICIAL, 0xff4bdd)
 			.addAttributeModifier(ReabsorptionInit.RECOUP, "33913b46-e7e3-414b-bbe2-664bcbbbb4ef",0.6, EntityAttributeModifier.Operation.MULTIPLY_BASE);
 	public static StatusEffect VoltaicBurst = new VoltaicBurst(StatusEffectCategory.BENEFICIAL, 0xff4bdd)
-			.addAttributeModifier(SpellAttributes.POWER.get(MagicSchool.LIGHTNING).attribute, "643cb40d-3fd8-473a-adab-7beaac5e639c",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
-			.addAttributeModifier(SpellAttributes.POWER.get(MagicSchool.ARCANE).attribute, "139e91a3-3026-44ed-b1e5-58b30bd31cb9",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
-			.addAttributeModifier(SpellAttributes.POWER.get(MagicSchool.SOUL).attribute, "a527f6c6-e910-4c67-a361-a309729826f9",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
-			.addAttributeModifier(SpellAttributes.HASTE.attribute, "74a261d0-2e88-488a-ba5f-5145274d5a44",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE);
-
-
+			.addAttributeModifier(SpellSchools.LIGHTNING.attribute, "643cb40d-3fd8-473a-adab-7beaac5e639c",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
+			.addAttributeModifier((SpellSchools.ARCANE).attribute, "139e91a3-3026-44ed-b1e5-58b30bd31cb9",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
+			.addAttributeModifier((SpellSchools.SOUL).attribute, "a527f6c6-e910-4c67-a361-a309729826f9",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE)
+			.addAttributeModifier(SpellPowerMechanics.HASTE.attribute, "74a261d0-2e88-488a-ba5f-5145274d5a44",0.02,EntityAttributeModifier.Operation.MULTIPLY_BASE);
+	
 	public static StatusEffect ETERNAL = new EternalYouth(StatusEffectCategory.BENEFICIAL, 0xff4bdd)
 			.addAttributeModifier(ReabsorptionInit.WARDING, "e481ebc4-6f40-4c58-9dcc-59cc4c98b2eb",20, EntityAttributeModifier.Operation.ADDITION)
 			.addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,"e481ebc4-6f40-4c58-9dcc-59cc4c98b2eb",-0.9,EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
@@ -84,7 +87,6 @@ public class Druids implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		lootConfig.refresh();
 		itemConfig.refresh();
 		AutoConfig.register(ServerConfigWrapper.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
 		config = AutoConfig.getConfigHolder(ServerConfigWrapper.class).getConfig().server;
@@ -147,9 +149,7 @@ public class Druids implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		Spells.initializeSpells();
-		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-			LootHelper.configure(id, tableBuilder, lootConfig.value, DruidsItems.entries);
-		});
+
 		itemConfig.save();
 		LOGGER.info("Hello Fabric world!");
 	}

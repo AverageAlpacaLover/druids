@@ -13,13 +13,15 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.spell_engine.SpellEngineMod;
 import net.spell_engine.api.spell.Spell;
 import net.spell_engine.api.spell.SpellInfo;
 import net.spell_engine.internals.SpellHelper;
 import net.spell_engine.internals.SpellRegistry;
 import net.spell_engine.particle.ParticleHelper;
 import net.spell_engine.utils.TargetHelper;
-import net.spell_power.api.attributes.SpellAttributes;
+import net.spell_power.api.SpellPowerMechanics;
+import net.spell_power.api.SpellSchools;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -51,7 +53,7 @@ public class VoltaicBurst extends StatusEffect {
                 SpellHelper.performImpacts(entity.getWorld(), entity, target, entity, new SpellInfo(spell, new Identifier(Druids.MODID, "voltaic_burst")), new SpellHelper.ImpactContext());
             }
             if(amplifier > 0) {
-                entity.addStatusEffect(new StatusEffectInstance(Druids.VoltaicBurst, (int) ((double)40/(0.01*entity.getAttributeValue(SpellAttributes.HASTE.attribute))), amplifier - 1, false, false));
+                entity.addStatusEffect(new StatusEffectInstance(Druids.VoltaicBurst, (int) ((double)30/(0.01*entity.getAttributeValue(SpellPowerMechanics.HASTE.attribute))), amplifier - 1, false, false));
 
             }
             for(Spell.Impact impact : SpellRegistry.getSpell(new Identifier(Druids.MODID,"lightningblast")).impact) {

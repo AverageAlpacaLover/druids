@@ -4,7 +4,7 @@ import com.druids.Druids;
 import com.druids.items.Shard;
 import mod.azure.azurelib.model.GeoModel;
 import net.minecraft.util.Identifier;
-import net.spell_power.api.MagicSchool;
+import net.spell_power.api.SpellSchools;
 
 public class  ShardModel extends GeoModel<Shard> {
 
@@ -16,13 +16,13 @@ public class  ShardModel extends GeoModel<Shard> {
 
     @Override
     public Identifier getTextureResource(Shard orb) {
-        if(orb.getSchool() == MagicSchool.FIRE) {
+        if(orb.getSchool() == SpellSchools.FIRE) {
             return new Identifier(Druids.MODID, "textures/item/shard_fire.png");
         }
-        if(orb.getSchool() == MagicSchool.FROST) {
+        if(orb.getSchool() == SpellSchools.FROST) {
             return new Identifier(Druids.MODID, "textures/item/shard_frost.png");
         }
-        if(orb.getSchool() == MagicSchool.LIGHTNING) {
+        if(orb.getSchool() == SpellSchools.LIGHTNING) {
             return new Identifier(Druids.MODID, "textures/item/shard_lightning.png");
         }
         return new Identifier(Druids.MODID, "textures/item/shard_arcane.png");
