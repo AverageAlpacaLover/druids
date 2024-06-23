@@ -13,7 +13,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.item.trinket.SpellBooks;
 import net.spell_engine.api.item.weapon.Weapon;
-import net.spell_power.api.SpellSchool;
 import net.spell_power.api.SpellSchools;
 
 public class ItemsInit {

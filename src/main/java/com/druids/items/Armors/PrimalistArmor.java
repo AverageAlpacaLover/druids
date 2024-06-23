@@ -9,18 +9,12 @@ import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
 import mod.azure.azurelib.core.animation.AnimatableManager;
 import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.Util;
-import net.minecraft.world.World;
 import net.spell_engine.api.item.armor.Armor;
 import net.spell_power.api.SpellSchools;
 
@@ -32,7 +26,6 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import static com.extraspellattributes.ReabsorptionInit.RECOUP;
-import static com.extraspellattributes.ReabsorptionInit.WARDING;
 
 public class PrimalistArmor extends CustomArmor implements GeoItem {
 

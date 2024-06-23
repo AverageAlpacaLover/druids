@@ -3,7 +3,6 @@ package com.druids.client.item.model;
 import com.druids.Druids;
 import com.druids.items.Armors.PrimalistArmor;
 import mod.azure.azurelib.model.GeoModel;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
 
 public class PrimalistArmorModel extends GeoModel<PrimalistArmor> {

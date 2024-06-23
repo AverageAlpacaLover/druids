@@ -1,14 +1,13 @@
 package com.druids;
 
-import com.druids.effects.VoltaicBurst;
-import com.druids.entity.*;
 import com.druids.config.Default;
 import com.druids.config.ServerConfig;
 import com.druids.config.ServerConfigWrapper;
 import com.druids.effects.CleansingFlame;
 import com.druids.effects.EternalYouth;
+import com.druids.effects.VoltaicBurst;
+import com.druids.entity.*;
 import com.druids.items.Armors.Armors;
-import com.druids.items.DruidsItems;
 import com.druids.items.ItemsInit;
 import com.druids.items.Weapons;
 import com.druids.spells.Spells;
@@ -17,8 +16,6 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.fabricmc.api.ModInitializer;
-
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -27,19 +24,14 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.runes.tinyconfig.ConfigManager;
 import net.spell_engine.api.item.ItemConfig;
 import net.spell_engine.api.loot.LootConfig;
-import net.spell_engine.api.loot.LootHelper;
-import net.spell_power.api.SpellPower;
 import net.spell_power.api.SpellPowerMechanics;
-import net.spell_power.api.SpellSchool;
 import net.spell_power.api.SpellSchools;
-import net.wizards.item.WizardArmor;
+import net.tinyconfig.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -151,6 +143,6 @@ public class Druids implements ModInitializer {
 		Spells.initializeSpells();
 
 		itemConfig.save();
-		LOGGER.info("Hello Fabric world!");
+		//LOGGER.info("Hello Fabric world!");
 	}
 }

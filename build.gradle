@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.3-SNAPSHOT'
+	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
 	id "com.github.johnrengelman.shadow" version "7.1.2"
 	id "com.matthewprenger.cursegradle" version "1.4.0"
@@ -73,7 +73,9 @@ dependencies {
 	modImplementation "mod.azure.azurelib:azurelib-fabric-1.20.1:1.0.29"
 
 	modImplementation("maven.modrinth:spell-power:${project.spell_power_version}-fabric")
+	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}-fabric")
 	modImplementation("maven.modrinth:runes:${project.runes_version}-fabric")
+	modImplementation("maven.modrinth:extra-rpg-attributes:${project.extra_spell_attributes_version}-fabric")
 	// Uncomment the following line to enable the deprecated Fabric API modules.
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
